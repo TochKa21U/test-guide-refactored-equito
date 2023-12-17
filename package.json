@@ -1,0 +1,21 @@
+{
+  "name": "testing-guide-refactored",
+  "version": "1.0.0",
+  "description": "Testing guide refactored to generate some keys",
+  "main": "start.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node start.js"
+  },
+  "keywords": [
+    "refactor",
+    "testing",
+    "equito"
+  ],
+  "author": "TochkaMG",
+  "license": "MIT",
+  "dependencies": {
+    "algosdk": "^2.7.0",
+    "ethers": "^6.9.0"
+  }
+}

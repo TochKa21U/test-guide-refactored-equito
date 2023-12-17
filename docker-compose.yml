@@ -1,0 +1,46 @@
+version: '3.9'
+services:
+  # Main service
+  equito-bridge:
+    container_name: equito-bridge
+    image: robindev912/equito-validator-node
+    pull_policy: always
+    ports:
+      - '7890:7890'
+    environment:
+      - DB_TYPE=postgres
+      - PG_USER=postgres
+      - PG_PASSWORD=mysecretpasssword
+      - PG_DB=postgres
+      - PG_PORT=5432
+      - PG_HOST=eqt-postgres
+      - DATABASE_URL=postgresql://postgres:mysecretpasssword@eqt-postgres:5432/postgres?sslmode=disable
+    depends_on:
+      - eqt-postgres
+    env_file:
+      - .env # Feel free to edit it
+      # - .env.example
+    restart: unless-stopped
+  # For postgres SQL
+  eqt-postgres:
+    container_name: eqt-postgres
+    image: postgres:14
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: mysecretpasssword
+      POSTGRES_DB: postgres
+    ports:
+      - '5432:5432'
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+  # Adminer is for checking the postgres
+  adminer:
+    image: adminer:4.8.1
+    ports:
+      - 8080:8080
+    restart: unless-stopped
+    depends_on:
+      - eqt-postgres
+
+volumes:
+  pgdata: {}

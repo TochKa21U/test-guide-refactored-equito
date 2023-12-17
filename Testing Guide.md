@@ -113,13 +113,6 @@ BNB_TESTNET_ENDPOINT=https://dark-wandering-tree.bsc-testnet.quiknode.pro/58aaf9
 
 These are the examples of endpoints.
 
-**Infura** (Ethereum Mainnet & Testnet)
-
-```sh
-https://mainnet.infura.io/v3/cb206f7f7ed64fb98108a56fac39f934
-https://goerli.infura.io/v3/cb206f7f7ed64fb98108a56fac39f934
-```
-
 **Alchemy** (Ethereum Mainnet & Testnet)
 
 ```sh
@@ -170,17 +163,9 @@ It is necessary to get API endpoints and set them in .env file.
 
 Visit [Alchemy](https://www.alchemy.com/) and create API endpoints.
 
-![Alchemy](./alchemy.png)
+![Alchemy](./pics/alchemy.png)
 
-![Alchemy Endpoint](./alchemy-endpoint.png)
-
-#### Infura
-
-Visit [Infura](https://www.infura.io/) and create API endpoints.
-
-![Infura](./infura.png)
-
-![Infura Endpoint](./infura-endpoint.png)
+![Alchemy Endpoint](./pics/alchemy-endpoint.png)
 
 #### QuickNode
 
